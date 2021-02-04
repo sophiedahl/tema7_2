@@ -35,12 +35,14 @@
 
 			console.log(`dyr:${dyr.dyr},${dyr.type},${dyr.levested},${dyr.billede}`);
 
+			//indhold skal placeres i article
 			const destination = document.querySelector("article");
 
-			const tekst = `dyr:${dyr.dyr}, ${dyr.type}, ${dyr.levested}`;
 
 			//kalder indhold
-			destination.querySelector("p").textContent = tekst;
+			destination.querySelector("h3").textContent = dyr.dyr;
+			destination.querySelector("p:first-of-type").textContent = dyr.type;
+			destination.querySelector("p:nth-of-type(2)").textContent = dyr.levested;
 			destination.querySelector("img").src = dyr.billede;
 		}
 

@@ -18,27 +18,45 @@
 
 	</article>
 
+	<section id="liste"></section>
 	<script>
 		document.addEventListener("DOMContentLoaded", start);
 
 		function start() {
 			console.log("DOM er loaded");
 
-			let dyr = {
-				"dyr": "gris",
-				"type": "pattegris",
-				"billede": "http://mabe-kea.dk/E19/pics/pig.png",
-				"levested": "svinefarme"
-			}
 
-			console.log(`dyr:${dyr.dyr},${dyr.type},${dyr.levested},${dyr.billede}`);
+			let dyr = [
 
-			const destination = document.querySelector("article");
-			const tekst = `dyr:${dyr.dyr}, ${dyr.type}, ${dyr.levested}`;
+				{
+					"dyr": "gris",
+					"type": "pattegris",
+					"billede": "http://mabe-kea.dk/E19/pics/pig.png",
+					"levested": "svinefarme"
+				}, {
+					"dyr": "frø",
+					"type": "sumppade",
+					"billede": "http://mabe-kea.dk/E19/pics/frog.png",
+					"levested": "sumpe"
+				}, {
+					"dyr": "ræv",
+					"type": "rævepels",
+					"billede": "http://mabe-kea.dk/E19/pics/fox.png",
+					"levested": "skove"
+				}, {
+					"dyr": "sild",
+					"type": "fiskesild",
+					"billede": "http://mabe-kea.dk/E19/pics/sild.jpg",
+					"levested": "havet"
+				}, {
+					"dyr": "krokodille",
+					"type": "sumpdyr",
+					"billede": "http://mabe-kea.dk/E19/pics/kroko.jpg",
+					"levested": "amazonas"
+				}
+			]
 
-			//kalder indhold
-			destination.querySelector("p").textContent = tekst;
-			destination.querySelector("img").src = dyr.billede;
+			console.log(dyr);
 		}
 
 	</script>
